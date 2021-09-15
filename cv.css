@@ -1,0 +1,186 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(110, 110, 110);
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: rgb(201, 201, 201);
+}
+
+h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template: 
+    "A B" auto
+    "C D" auto / 1fr 1fr
+    ;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#photo {
+    grid-area: A;
+    width: 100%;
+}
+
+#citat {
+    font-size: 42px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: lighter;
+    grid-area: B;
+}
+
+#info {
+    grid-area: D;
+    margin-bottom: 40px;
+}
+
+section {
+    display: grid;
+    grid-template:
+    "A B C D E" / 1fr 2fr 1fr 2fr 1fr
+    ;
+}
+
+#xp {
+    grid-area: B;
+    text-align: right;
+}
+
+#awards {
+    grid-area: D;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    margin-top: 75px;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 25px;
+}
+
+@media (max-width: 1280px) {
+    main {
+        display: grid;
+        grid-template: 
+        "D A E" auto
+        "D B E" auto
+        "D C E" auto / 1fr 4fr 1fr
+        ;
+    }
+
+    #photo {
+        grid-area: A;
+        width: 100%;
+    }
+
+    #citat {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    #info {
+        grid-area: C;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    main {
+        display: grid;
+        grid-template: 
+        "D A E" auto
+        "D B E" auto
+        "D C E" auto
+        "D F E" auto
+        "D G E" auto / 1fr 4fr 1fr
+        ;
+    }
+
+    #photo {
+        width: 100%;
+        grid-area: A;
+    }
+
+    #citat {
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    #info {
+        grid-area: C;
+        text-align: center;
+    }
+
+    section {
+        display: grid;
+        grid-template:
+        "A B C" auto
+        "D E F" auto / 1fr 4fr 1fr
+        ;
+    }
+
+    #xp {
+        grid-area: B;
+        text-align: left;
+    }
+
+    #awards {
+        grid-area: E;
+        margin-top: 40px;
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+}
